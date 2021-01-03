@@ -41,11 +41,19 @@ First, to run the just simulation (`sim.py`) you need to install necessary packa
 
 Secondly, to run the preprocessing (`preprocess.py`) and get_results (`results.py`):
 
-    conda install geopandas rasterio rasterstats tqdm
+    conda install geopandas
 
 Finally, to visualize the results (`vis.py`) you will need:
 
     conda install matplotlib seaborn contextily descartes
+
+If you want to run the tests provided, you will need to install pytest:
+
+    conda install pytest
+
+And then you can simply enter the following to check test coverage:
+
+    pytest
 
 
 Quick Start
