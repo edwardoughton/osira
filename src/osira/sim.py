@@ -77,6 +77,11 @@ def allocate_probabilities(results, num_substations, probabilities):
     probabilities : list
         Contains the cumulative probabilities we wish to use.
 
+    Returns
+    -------
+    output : list of dicts
+        Contains all generated results with probabilities.
+
     """
     output = []
 
