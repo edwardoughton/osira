@@ -1,5 +1,5 @@
 """
-Simulation code for osira.
+Simulation functions for osira.
 
 Written by Ed Oughton
 
@@ -74,6 +74,8 @@ def allocate_probabilities(results, num_substations, probabilities):
     ----------
     results : list of dicts
         All iterations generated in the simulation function.
+    num_substations : list
+        The number of electricity substation nodes we wish to select for each scenario.
     probabilities : list
         Contains the cumulative probabilities we wish to use.
 
