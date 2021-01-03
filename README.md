@@ -1,6 +1,6 @@
 # Open Source Infrastructure Risk Analytics (osira)
 
-[![Build Status](https://travis-ci.com/edwardoughton/osira.svg?branch=master)](https://travis-ci.com/edwardoughton/osira)
+[![Build Status](https://travis-ci.com/edwardoughton/osira.svg?branch=main)](https://travis-ci.com/edwardoughton/osira)
 [![Documentation Status](https://readthedocs.org/projects/osira/badge/?version=latest)](https://osira.readthedocs.io/en/latest/?badge=latest)
 [![Coverage Status](https://coveralls.io/repos/github/edwardoughton/osira/badge.svg?branch=main)](https://coveralls.io/github/edwardoughton/osira?branch=main)
 
