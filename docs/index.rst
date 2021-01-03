@@ -1,9 +1,17 @@
-# Open Source Infrastructure Risk Analytics (osira)
+Open Source Infrastructure Risk Analytics (osira)
+=========
 
 [![Build Status](https://travis-ci.com/edwardoughton/osira.svg?branch=master)](https://travis-ci.com/edwardoughton/osira)
 [![Documentation Status](https://readthedocs.org/projects/osira/badge/?version=latest)](https://osira.readthedocs.io/en/latest/?badge=latest)
 [![Coverage Status](https://coveralls.io/repos/github/edwardoughton/osira/badge.svg?branch=master)](https://coveralls.io/github/edwardoughton/osira?branch=master)
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+Description
+===========
 
 This repository provides an open source codebase to quantify the direct and indirect impacts
 of infrastructure cascading failure. For example, resulting from a cyber-attack.
@@ -102,3 +110,11 @@ Contributors
 - Scott Thacker (Oxford & UNOPS)
 - Jim Hall (Oxford)
 - Scott Kelly (Cambridge & UTS)
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
