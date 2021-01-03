@@ -8,10 +8,10 @@ December 2020
 """
 import configparser
 import os
+import random
 import pandas as pd
 
-from globalsat.sim import system_capacity
-from inputs import parameters, lut
+from osira.sim import simulation, allocate_probabilities
 
 CONFIG = configparser.ConfigParser()
 CONFIG.read(os.path.join(os.path.dirname(__file__), 'script_config.ini'))
@@ -22,17 +22,29 @@ RESULTS = os.path.join(BASE_PATH, '..', 'results')
 
 if __name__ == '__main__':
 
-    results = []
+    if not os.path.exists(RESULTS):
+        os.makedirs(RESULTS)
 
-    for constellation, params in parameters.items():
+    data = {}
 
-        for number_of_satellites in range(60, params['number_of_satellites'] + 60, 60):
+    for i in range(0, 100):
+        data[i] = {
+            'id': i,
+            'population': random.randint(100, 1000)
+            }
 
-            data = system_capacity(constellation, number_of_satellites, params, lut)
+    num_substations = [4, 7, 14]
+    iterations = 100
+    probabilities = [0.5, 0.1, 0.01]
 
-            results = results + data
+    all_results = simulation(data, num_substations, probabilities, iterations)
 
-    results = pd.DataFrame(results)
+    cp_scenarios = allocate_probabilities(all_results, num_substations, probabilities)
 
-    path = os.path.join(RESULTS, 'sim_results.csv')
-    results.to_csv(path, index=False)
+    all_results = pd.DataFrame(all_results)
+    path = os.path.join(RESULTS, 'all_results.csv')
+    all_results.to_csv(path, index=False)
+
+    cp_scenarios = pd.DataFrame(cp_scenarios)
+    path = os.path.join(RESULTS, 'cp_scenarios.csv')
+    cp_scenarios.to_csv(path, index=False)
