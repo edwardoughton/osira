@@ -93,3 +93,11 @@ def test_allocate_probabilities():
     assert cp_scenarios[0]['substation_ids'] == [89, 49, 63, 51, 31, 18, 83]
     assert cp_scenarios[0]['rank'] == 50
     assert cp_scenarios[0]['cum_probability'] == 0.495
+
+    num_substations = [4, 7, 14]
+
+    all_results = simulation(data, num_substations, probabilities, iterations)
+
+    cp_scenarios = allocate_probabilities(all_results, num_substations, probabilities)
+
+    assert len(cp_scenarios) == 3
