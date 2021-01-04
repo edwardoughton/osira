@@ -80,7 +80,7 @@ First, you need to install necessary packages, which at a minimum, is `geopandas
 
     conda install geopandas pytest matplotlib seaborn
 
-For development purposes, clone this repository and run:
+Then clone this repository and run:
 
     python setup.py install
 
@@ -96,11 +96,11 @@ And, also should you want to run the tests:
 Quick Start
 ===========
 
-To quickly generate results run the following:
+To quickly get started using synthetic data run this:
 
-    python scripts/run.py
+    python scripts/demo.py
 
-Followed by this to visualize the results:
+Followed by using the `vis.py` script to visualize the results:
 
     python vis/vis.py
 

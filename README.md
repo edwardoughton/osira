@@ -36,11 +36,11 @@ Example results
 Using conda
 ===========
 
-The recommended installation method is to use conda, which handles packages and virtual
-environments, along with the conda-forge channel which has a host of pre-built libraries and
-packages.
+The recommended installation method for `osira` is to use conda, which handles packages and
+virtual environments, along with the conda-forge channel which has a host of pre-built
+libraries and packages.
 
-Create a conda environment called osira:
+Create a conda environment called `osira`:
 
     conda create --name osira python=3.7 gdal
 
@@ -52,15 +52,7 @@ You need to install necessary packages:
 
     conda install geopandas pytest matplotlib seaborn
 
-And if you want to check test coverage enter as follows:
-
-    python -m pytest
-
-
-Quick Start
-===========
-
-To quick start, install the `osira` package:
+Then clone this repository and run:
 
     python setup.py install
 
@@ -68,19 +60,19 @@ Or if you want to develop the package:
 
     python setup.py develop
 
-Then run the simulation to generate results:
+And if you want to check test coverage run `pytest`:
 
-    python scripts/run.py
+    python -m pytest
 
-If you want to create the map try:
 
-    python scripts/preprocess.py
+Quick Start
+===========
 
-Followed by:
+To quickly get started using synthetic data run this:
 
-    python scripts/results.py
+    python scripts/demo.py
 
-And then:
+Followed by using the `vis.py` script to visualize the results:
 
     python vis/vis.py
 

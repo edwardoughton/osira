@@ -1,7 +1,5 @@
 """
-Simulation run script for osira using real data.
-
-Make sure you first obtain the necessary data and run scripts/preprocess.py.
+Demo simulation script for osira using synthetic data.
 
 Written by Ed Oughton.
 
