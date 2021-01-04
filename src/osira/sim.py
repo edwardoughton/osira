@@ -89,7 +89,7 @@ def allocate_probabilities(results, num_substations, probabilities):
 
     for nodes in num_substations:
 
-        ranked_data = add_cp(results, nodes)
+        ranked_data = add_cp(results, nodes, probabilities)
 
         for probability in probabilities:
 
@@ -103,7 +103,7 @@ def allocate_probabilities(results, num_substations, probabilities):
     return output
 
 
-def add_cp(results, nodes):
+def add_cp(results, nodes, probabilities):
     """
     Add the F-N cumulative frequency.
 
@@ -115,6 +115,8 @@ def add_cp(results, nodes):
         All iterations generated in the simulation function.
     nodes : int
         Number of substations for the scenario.
+    probabilities : list
+        Contains the cumulative probabilities we wish to use.
 
     Returns
     -------
@@ -138,7 +140,7 @@ def add_cp(results, nodes):
             continue
 
         item['rank'] = rank
-        item['cum_probability'] = round(rank / (len(results) + 1), 3)
+        item['cum_probability'] = round(rank / (len(results) / len(probabilities) + 1), 3)
 
         output.append(item)
 

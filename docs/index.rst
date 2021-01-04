@@ -1,39 +1,71 @@
 Open Source Infrastructure Risk Analytics (osira)
 =================================================
 
-[![Build Status](https://travis-ci.com/edwardoughton/osira.svg?branch=main)](https://travis-ci.com/edwardoughton/osira)
-[![Documentation Status](https://readthedocs.org/projects/osira/badge/?version=latest)](https://osira.readthedocs.io/en/latest/?badge=latest)
-[![Coverage Status](https://coveralls.io/repos/github/edwardoughton/osira/badge.svg?branch=main)](https://coveralls.io/github/edwardoughton/osira?branch=main)
+.. image:: https://travis-ci.com/edwardoughton/osira.svg?branch=main
+    :target: https://travis-ci.org/edwardoughton/osira
+    :alt: Build Status
+
+.. image:: https://readthedocs.org/projects/osira/badge/?version=latest
+    :target: https://osira.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. image:: https://coveralls.io/repos/github/edwardoughton/osira/badge.svg?branch=main
+    :target: https://coveralls.io/github/edwardoughton/osira?branch=main
+    :alt: Coverage Status
+
+.. image:: https://img.shields.io/badge/github-osira-brightgreen
+    :target: https://github.com/edwardoughton/osira
+    :alt: Source Code
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Welcome to the documentation for osira!
 
 
 Description
 ===========
 
-This repository provides an open source codebase to quantify the direct and indirect impacts
-of infrastructure cascading failure. For example, resulting from a cyber-attack.
+These docs provide an overview of the Open Source Infrastructure Risk Analytics (osira)
+codebase written in Python.
 
-The repository name is taken from Wonder Woman where Osira was a fictional Egyptian god
-respected for her advanced understanding of technology, therefore providing inspiration for
-this codebase.
-
-Indeed, infrastructure systems are groups of technologies, thus advancing our understanding
-can help us make better decisions, for example, in relation to risk management.
-
-Despite infrastructure being of growing importance, there are surprisingly few open source,
-fully-tested, fully-documented codebases available for risk analysts to use. This repository
-therefore makes a strong contribution to the field of risk analytics.
+The aim is to be able to quantify the direct and indirect impacts of infrastructure cascading
+failure, such as from cyber-attacks on electricity assets.
 
 
-Using conda
-===========
+Citation
+========
 
-The recommended installation method is to use conda, which handles packages and virtual
-environments, along with the conda-forge channel which has a host of pre-built libraries and
+- Oughton, E. J. et al. (2019) ‘Stochastic Counterfactual Risk Analysis for the Vulnerability
+  Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks’,
+  Risk Analysis, 39(9), pp. 2012–2031. https://doi.org/10.1111/risa.13291.
+
+
+Statement of Need
+=================
+
+Disruption in electricity supply has major ramifications for both society and the economy.
+Risk analysts working in the insurance sector have a major interest in trying to understand
+the potential business interuption impacts.
+
+Indeed, catastrophic events such as cyber-attacks are both a major risk management issue and a
+huge business opportunity for different types of insurers.
+
+However, it is surprising that we lack open-source models to help quantify these risks,
+providing strong motivation for the content of the `osira` repository.
+
+
+Setup and Configuration
+=======================
+
+All code for itmlogic is written in Python (Python>=3.7).
+
+See requirements.txt for a full list of dependencies.
+
+
+Installing via conda
+====================
+
+The recommended installation method is to use conda to handle packages and virtual
+environments. The conda-forge channel also has a host of pre-built libraries and
 packages.
 
 Create a conda environment called osira:
@@ -44,23 +76,11 @@ Activate it (run this each time you switch projects):
 
     conda activate osira
 
-First, to run the just simulation (`sim.py`) you need to install necessary packages:
+First, you need to install necessary packages, which at a minimum, is `geopandas`:
 
-    conda install numpy pandas
+    conda install geopandas pytest matplotlib seaborn
 
-Secondly, to run the preprocessing (`preprocess.py`) and get_results (`results.py`):
-
-    conda install geopandas rasterio rasterstats tqdm
-
-Finally, to visualize the results (`vis.py`) you will need:
-
-    conda install matplotlib seaborn contextily descartes
-
-
-Quick Start
-===========
-
-To quick start, install the `osira` package:
+For development purposes, clone this repository and run:
 
     python setup.py install
 
@@ -68,19 +88,19 @@ Or if you want to develop the package:
 
     python setup.py develop
 
-Then run the simulation to generate results:
+And, also should you want to run the tests:
+
+    python -m pytest
+
+
+Quick Start
+===========
+
+To quickly generate results run the following:
 
     python scripts/run.py
 
-If you want to create the map try:
-
-    python scripts/preprocess.py
-
-Followed by:
-
-    python scripts/results.py
-
-And then:
+Followed by this to visualize the results:
 
     python vis/vis.py
 
@@ -98,24 +118,24 @@ We would like to thank UKRI, specifically the Engineering and Physical Sciences 
 Council for support via grant EP/N017064/1.
 
 
-Contributors
+Contents
+========
+
+.. toctree::
+   :maxdepth: 3
+
+   Getting Started <getting-started>
+   Reference <api/modules>
+
+.. toctree::
+   :maxdepth: 1
+
+   License <license>
+   Authors <authors>
+
+
+Make Contact
 ============
-- Ed Oughton (GMU & Oxford)
-- Daniel Ralph (Cambridge)
-- Eireann Leverett (Cambridge & Airbus)
-- Raghav Pant (Oxford)
-- Jen Copic (Cambridge)
-- Simon Ruffle (Cambridge)
-- Andrew Coburn (Cambridge)
-- Michele Tuveson (Cambridge)
-- Scott Thacker (Oxford & UNOPS)
-- Jim Hall (Oxford)
-- Scott Kelly (Cambridge & UTS)
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+- Report bugs, suggest features or view the source code `on GitHub`_.
+    .. _on GitHub: https://github.com/edwardoughton/osira
