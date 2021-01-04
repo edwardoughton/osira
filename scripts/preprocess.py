@@ -8,20 +8,7 @@ December 2020
 """
 import os
 import configparser
-# import json
-# import math
-# import glob
-# import numpy as np
-# import pandas as pd
 import geopandas as gpd
-# import pyproj
-# from shapely.geometry import Point, LineString, Polygon, MultiPolygon, shape, mapping, box
-# from shapely.ops import unary_union, nearest_points, transform
-# import rasterio
-# from rasterio.warp import calculate_default_transform, reproject, Resampling
-# from rasterio.mask import mask
-# from rasterstats import zonal_stats, gen_zonal_stats
-# from tqdm import tqdm
 
 CONFIG = configparser.ConfigParser()
 CONFIG.read(os.path.join(os.path.dirname(__file__), 'script_config.ini'))
@@ -30,6 +17,7 @@ BASE_PATH = CONFIG['file_locations']['base_path']
 DATA_RAW = os.path.join(BASE_PATH, 'raw')
 DATA_INTERMEDIATE = os.path.join(BASE_PATH, 'intermediate')
 DATA_PROCESSED = os.path.join(BASE_PATH, 'processed')
+
 
 def load_mastermap(path):
     """
