@@ -31,6 +31,14 @@ The aim is to be able to quantify the direct and indirect impacts of infrastruct
 failure, such as from cyber-attacks on electricity assets.
 
 
+Citation
+========
+
+- Oughton, E. J. et al. (2019) ‘Stochastic Counterfactual Risk Analysis for the Vulnerability
+  Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks’,
+  Risk Analysis, 39(9), pp. 2012–2031. https://doi.org/10.1111/risa.13291.
+
+
 Statement of Need
 =================
 
@@ -70,7 +78,7 @@ Activate it (run this each time you switch projects):
 
 First, you need to install necessary packages, which at a minimum, is `geopandas`:
 
-    conda install geopandas pytest
+    conda install geopandas pytest matplotlib seaborn
 
 For development purposes, clone this repository and run:
 
