@@ -20,6 +20,19 @@ fully-tested, fully-documented codebases available for risk analysts to use. Thi
 therefore makes a strong contribution to the field of risk analytics.
 
 
+Citation
+========
+
+- Oughton, E. J. et al. (2019) ‘Stochastic Counterfactual Risk Analysis for the Vulnerability
+  Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks’,
+  Risk Analysis, 39(9), pp. 2012–2031. https://doi.org/10.1111/risa.13291.
+
+
+Example results
+===============
+![Example](/fn_curve.png)
+
+
 Using conda
 ===========
 
@@ -35,25 +48,13 @@ Activate it (run this each time you switch projects):
 
     conda activate osira
 
-First, to run the just simulation (`sim.py`) you need to install necessary packages:
+You need to install necessary packages:
 
-    conda install numpy pandas
+    conda install geopandas pytest matplotlib seaborn
 
-Secondly, to run the preprocessing (`preprocess.py`) and get_results (`results.py`):
+And if you want to check test coverage enter as follows:
 
-    conda install geopandas
-
-Finally, to visualize the results (`vis.py`) you will need:
-
-    conda install matplotlib seaborn contextily descartes
-
-If you want to run the tests provided, you will need to install pytest:
-
-    conda install pytest
-
-And then you can simply enter the following to check test coverage:
-
-    pytest
+    python -m pytest
 
 
 Quick Start
