@@ -13,7 +13,6 @@ import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import seaborn as sns
-# import contextily as ctx
 
 CONFIG = configparser.ConfigParser()
 CONFIG.read(os.path.join(os.path.dirname(__file__), '..', 'scripts', 'script_config.ini'))
@@ -35,12 +34,10 @@ def load_results():
 
     all_results['population_m'] = all_results['population'] / 1e6
 
-    # all_results['cum_probability'] = np.log2(all_results['cum_probability'])
-
     all_results = all_results[['nodes', 'population_m', 'cum_probability']]
 
     all_results.columns = [
-        'Substations Affected',
+        'Substations',
         'Population (Millions)',
         'Cumulative Frequency'
     ]
@@ -50,7 +47,9 @@ def load_results():
 
 def generate_fn_curves(results):
     """
-    Generate F-N cumulative frequency curve, as per Figure 4 in Oughton et al. (2019).
+    Generate F-N cumulative frequency curve.
+
+    See Figure 4 in Oughton et al. (2019).
 
     Parameters
     ----------
@@ -58,27 +57,33 @@ def generate_fn_curves(results):
         Contains the simulation results ready for plotting.
 
     """
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(4, 2.5))
 
     palette = sns.color_palette("rocket_r", 3)
-    sns.set_context("paper", font_scale=0.9)
+    sns.set_context("paper", font_scale=0.6)
 
     plot = sns.lineplot(
         x='Population (Millions)', y='Cumulative Frequency',
-        hue='Substations Affected', style='Substations Affected',
+        hue='Substations', style='Substations',
         palette=palette, dashes=[(2,3), (2,2), (2,1)],
         linewidth = .75,
         data=results, ax=ax,
     )
 
+    plot.set_xlabel(xlabel='Direct Population Disruption (Millions)', fontsize=6)
+    plot.set_ylabel(ylabel='Cumulative Frequency', fontsize=6)
+    plot.tick_params(labelsize=5)
+
     plot.axhline(y=0.5, linewidth=0.2, color='black', linestyle='--')
     plot.axhline(y=0.1, linewidth=0.2, color='black')
     plot.axhline(y=0.01, linewidth=0.2, color='black')
-    plot.set_title('Stochastic Infrastructure Cyber-Attack Events: Direct Population Disruption')
+    plot.set_title('Stochastic Counterfactual Risk Analysis of Cyber-Physical Attacks')
 
-    plot.text(5e5, 0.51, '50% CP',rotation=0)
-    plot.text(5e5, 0.11, '10% CP',rotation=0)
-    plot.text(5e5, 0.02, '1% CP',rotation=0)
+    plot.text(0.05, 0.51, '50% CP',rotation=0)
+    plot.text(0.05, 0.11, '10% CP',rotation=0)
+    plot.text(0.05, 0.02, '1% CP',rotation=0)
+
+    plt.subplots_adjust(bottom=0.125)
 
     fig = plot.get_figure()
     fig.savefig(os.path.join(VIS, 'fn_curve.png'), dpi=300)
@@ -92,8 +97,3 @@ if __name__ == '__main__':
     results = load_results()
 
     generate_fn_curves(results)
-
-    # print(results)
-
-    # path = os.path.join(RESULTS, 'cp_scenarios.csv')
-    # cp_scenarios = pd.read_csv(path, index=False)
