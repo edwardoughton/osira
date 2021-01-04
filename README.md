@@ -8,16 +8,15 @@
 This repository provides an open source codebase to quantify the direct and indirect impacts
 of infrastructure cascading failure. For example, resulting from a cyber-attack.
 
-The repository name is taken from Wonder Woman where Osira was a fictional Egyptian god
-respected for her advanced understanding of technology, therefore providing inspiration for
-this codebase.
+The repository name is taken from Wonder Woman where Osira is a fictional Egyptian Goddess
+respected for her advanced understanding of technology.
 
-Indeed, infrastructure systems are groups of technologies, thus advancing our understanding
-can help us make better decisions, for example, in relation to risk management.
+Infrastructure systems are groups of technologies, therefore advancing our understanding
+in this area can help us make better decisions, for example, in relation to risk management.
 
 Despite infrastructure being of growing importance, there are surprisingly few open source,
-fully-tested, fully-documented codebases available for risk analysts to use. This repository
-therefore makes a strong contribution to the field of risk analytics.
+fully-tested, fully-documented codebases available for risk analysts to use. The contribution 
+of this repository to the field of risk analytics is to fill this gap.
 
 
 Citation
