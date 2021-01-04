@@ -11,12 +11,12 @@ of infrastructure cascading failure. For example, resulting from a cyber-attack.
 The repository name is taken from Wonder Woman where Osira is a fictional Egyptian Goddess
 respected for her advanced understanding of technology.
 
-Infrastructure systems are groups of technologies, therefore advancing our understanding
-in this area can help us make better decisions, for example, in relation to risk management.
+Advancing our understanding of the groups of technologies known as 'infrastructure systems' 
+can help us make better decisions, particularly in relation to risk management.
 
 Despite infrastructure being of growing importance, there are surprisingly few open source,
 fully-tested, fully-documented codebases available for risk analysts to use. The contribution 
-of this repository to the field of risk analytics is to fill this gap.
+of this repository is to fill this gap.
 
 
 Citation
