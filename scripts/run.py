@@ -25,17 +25,18 @@ if __name__ == '__main__':
     if not os.path.exists(RESULTS):
         os.makedirs(RESULTS)
 
+    total_substation = 100
+    num_substations = [4, 7, 14]
+    iterations = 1000
+    probabilities = [0.5, 0.1, 0.01]
+
     data = {}
 
-    for i in range(0, 100):
+    for i in range(0, total_substation):
         data[i] = {
             'id': i,
-            'population': random.randint(100, 1000)
+            'population': random.randint(1e4, 1e5)
             }
-
-    num_substations = [4, 7, 14]
-    iterations = 100
-    probabilities = [0.5, 0.1, 0.01]
 
     all_results = simulation(data, num_substations, probabilities, iterations)
 
