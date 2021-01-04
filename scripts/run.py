@@ -1,7 +1,9 @@
 """
-Simulation run script for Globalsat.
+Simulation run script for osira using real data.
 
-Written by Bonface Osoro & Ed Oughton.
+Make sure you first obtain the necessary data and run scripts/preprocess.py.
+
+Written by Ed Oughton.
 
 December 2020
 
