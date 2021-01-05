@@ -86,7 +86,7 @@ def cascading_failures(results, data_indirect):
     Returns
     -------
     output : list of dicts
-        Results containing indirect impacts.
+        Contains all generated results.
 
     """
     output = []
@@ -135,7 +135,7 @@ def allocate_probabilities(results, num_substations, probabilities):
     Returns
     -------
     output : list of dicts
-        Contains all generated results with probabilities.
+        Contains all generated results.
 
     """
     output = []
@@ -174,7 +174,7 @@ def add_cp(results, nodes, probabilities):
     Returns
     -------
     output : list of dicts
-        Results containing cumulative probability.
+        Contains all generated results.
 
     """
     output = []
