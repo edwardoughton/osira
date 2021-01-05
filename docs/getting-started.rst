@@ -4,7 +4,8 @@ Getting Started
 
 This tutorial provides explanation for the use of the ``osira`` codebase.
 
-Firstly, a summary of the main primary parameters and outputs is given.
+Firstly, a summary of the main primary parameters, secondary parameters
+and outputs is given.
 
 Primary input parameters
 ------------------------
@@ -31,8 +32,8 @@ substation_ids               Node ids based on the runner index
 substation_asset_ids         Secondary node ids based on the runner index
 rank                         The iteration rank
 cum_probability              Cumulative probability
-Railway Station
-Gas Distribution or Storage
+Railway Station              Number of stations indirectly affected
+Gas Distribution or Storage  Number of gas assets indirectly affected
 ============================ ==============================================
 
 Outputs
@@ -92,8 +93,8 @@ connecting each asset to an electricity substation and finally exporting the dat
 Additionally, local statistical area boundaries are obtained and merged with population
 estimates. The datasets required are:
 
-- Local area boundaries via the [ONS geoportal](https://geoportal.statistics.gov.uk/)
-- Population estimates via [NOMIS](https://www.nomisweb.co.uk/)
+- Local area boundaries via the ONS geoportal: https://geoportal.statistics.gov.uk/
+- Population estimates via NOMIS: https://www.nomisweb.co.uk/
 
 After merging the data, it is then possible to use the centroid of each polygon to estimate
 the proportion of the population served by each electricity substation.
