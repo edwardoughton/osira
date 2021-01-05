@@ -32,7 +32,9 @@ Citations
 
 Example infrastructure inputs
 -----------------------------
-![Example](/images/asset_map.png)
+<p align="center">
+  <img src="/images/asset_map.png" />
+</p>
 
 
 Using conda
