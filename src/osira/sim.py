@@ -7,6 +7,7 @@ January 2021
 
 """
 import random
+from collections import Counter
 
 
 def simulation(data, num_substations, probabilities, iterations):
@@ -50,10 +51,14 @@ def simulation(data, num_substations, probabilities, iterations):
                 if not n in substation_ids:
                     substation_ids.append(n)
 
+            substation_asset_ids = []
+
             population = 0
 
             for key, value in data.items():
+
                 if key in substation_ids:
+                    substation_asset_ids.append(value['id'])
                     population += value['population']
 
             output.append({
@@ -61,7 +66,55 @@ def simulation(data, num_substations, probabilities, iterations):
                 'iteration': i,
                 'population': population,
                 'substation_ids': substation_ids,
+                'substation_asset_ids': substation_asset_ids,
             })
+
+    return output
+
+
+def cascading_failures(results, data_indirect):
+    """
+    Quantify indirect cascading failures.
+
+    Parameters
+    ----------
+    results : list of dicts
+        All iterations generated in the simulation function.
+    data_indirect : dict
+        Lookup table for indirect network connections.
+
+    Returns
+    -------
+    output : list of dicts
+        Results containing indirect impacts.
+
+    """
+    output = []
+
+    for item in results:
+
+        substation_asset_ids = item['substation_asset_ids']
+
+        indirect_assets_affected = []
+
+        for asset_id in substation_asset_ids:
+
+            for key, value in data_indirect.items():
+
+                if asset_id == key:
+
+                    indirect_assets_affected.append(value['dest_func'])
+
+        count = Counter(indirect_assets_affected)
+
+        result = {}
+
+        for key, value in item.items():
+            result[key] = value
+        for key, value in count.items():
+            result[key] = value
+
+        output.append(result)
 
     return output
 
