@@ -30,9 +30,9 @@ Citations
   Studies.
 
 
-Example results
----------------
-![Example](/fn_curve.png)
+Example infrastructure inputs
+-----------------------------
+![Example](/images/asset_map.png)
 
 
 Using conda
@@ -77,6 +77,11 @@ To quickly get started using synthetic data run this:
 Followed by using the `vis.py` script to visualize the results:
 
     python vis/vis.py
+
+
+Example results
+---------------
+![Example](/images/fn_curve.png)
 
 
 Background and funding
