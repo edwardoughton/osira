@@ -22,7 +22,7 @@ Welcome to the documentation for osira!
 
 
 Description
-===========
+-----------
 
 These docs provide an overview of the Open Source Infrastructure Risk Analytics (osira)
 codebase written in Python.
@@ -32,15 +32,18 @@ failure, such as from cyber-attacks on electricity assets.
 
 
 Citation
-========
+--------
 
 - Oughton, E. J. et al. (2019) ‘Stochastic Counterfactual Risk Analysis for the Vulnerability
   Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks’,
   Risk Analysis, 39(9), pp. 2012–2031. https://doi.org/10.1111/risa.13291.
+- Cambridge Centre for Risk Studies (2016) Integrated infrastructure: Cyber resiliency in
+  society, mapping the consequences of an interconnected digital economy. Cambridge: Cambridge
+  Centre for Risk Studies.
 
 
 Statement of Need
-=================
+-----------------
 
 Disruption in electricity supply has major ramifications for both society and the economy.
 Risk analysts working in the insurance sector have a major interest in trying to understand
@@ -54,7 +57,7 @@ providing strong motivation for the content of the `osira` repository.
 
 
 Setup and Configuration
-=======================
+-----------------------
 
 All code for itmlogic is written in Python (Python>=3.7).
 
@@ -62,7 +65,7 @@ See requirements.txt for a full list of dependencies.
 
 
 Installing via conda
-====================
+--------------------
 
 The recommended installation method is to use conda to handle packages and virtual
 environments. The conda-forge channel also has a host of pre-built libraries and
@@ -94,7 +97,7 @@ And, also should you want to run the tests:
 
 
 Quick Start
-===========
+-----------
 
 To quickly get started using synthetic data run this:
 
@@ -106,20 +109,20 @@ Followed by using the `vis.py` script to visualize the results:
 
 
 Background and funding
-======================
+----------------------
 
-The approach has been developed over many years at numerous institutions.
+The approach has been developed over many years at numerous institutions:
 
 - 2015-2017: Cambridge Centre for Risk Studies, University of Cambridge
 - 2017-2020: Environmental Change Institute, University of Oxford
-- 2020-2021: Geography and Geoinformation Sciences, George Mason University.
+- 2020-2021: Geography and Geoinformation Sciences, George Mason University
 
 We would like to thank UKRI, specifically the Engineering and Physical Sciences Research
 Council for support via grant EP/N017064/1.
 
 
 Contents
-========
+--------
 
 .. toctree::
    :maxdepth: 3
@@ -135,7 +138,7 @@ Contents
 
 
 Make Contact
-============
+------------
 
 - Report bugs, suggest features or view the source code `on GitHub`_.
     .. _on GitHub: https://github.com/edwardoughton/osira
