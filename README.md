@@ -11,32 +11,32 @@ of infrastructure cascading failure. For example, resulting from a cyber-attack.
 The repository name is taken from Wonder Woman where Osira is a fictional Egyptian Goddess
 respected for her advanced understanding of technology.
 
-Advancing our understanding of the groups of technologies known as 'infrastructure systems' 
+Advancing our understanding of the groups of technologies known as 'infrastructure systems'
 can help us make better decisions, particularly in relation to risk management.
 
 Despite infrastructure being of growing importance, there are surprisingly few open source,
-fully-tested, fully-documented codebases available for risk analysts to use. The contribution 
+fully-tested, fully-documented codebases available for risk analysts to use. The contribution
 of this repository is to fill this gap.
 
 
 Citations
-=========
+---------
 
 - Oughton, E. J. et al. (2019) ‘Stochastic Counterfactual Risk Analysis for the Vulnerability
   Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks’,
   Risk Analysis, 39(9), pp. 2012–2031. https://doi.org/10.1111/risa.13291.
-- Cambridge Centre for Risk Studies (2016) Integrated infrastructure: Cyber resiliency in 
-  society, mapping the consequences of an interconnected digital economy. Cambridge: Cambridge 
+- Cambridge Centre for Risk Studies (2016) Integrated infrastructure: Cyber resiliency in
+  society, mapping the consequences of an interconnected digital economy. Cambridge: Cambridge
   Centre for Risk Studies.
 
 
 Example results
-===============
+---------------
 ![Example](/fn_curve.png)
 
 
 Using conda
-===========
+-----------
 
 The recommended installation method for `osira` is to use conda, which handles packages and
 virtual environments, along with the conda-forge channel which has a host of pre-built
@@ -68,7 +68,7 @@ And if you want to check test coverage run `pytest`:
 
 
 Quick Start
-===========
+-----------
 
 To quickly get started using synthetic data run this:
 
@@ -80,20 +80,20 @@ Followed by using the `vis.py` script to visualize the results:
 
 
 Background and funding
-======================
+----------------------
 
-The approach has been developed over many years at numerous institutions.
+The approach has been developed over many years at numerous institutions:
 
 - 2015-2017: Cambridge Centre for Risk Studies, University of Cambridge
 - 2017-2020: Environmental Change Institute, University of Oxford
-- 2020-2021: Geography and Geoinformation Sciences, George Mason University.
+- 2020-2021: Geography and Geoinformation Sciences, George Mason University
 
 We would like to thank UKRI, specifically the Engineering and Physical Sciences Research
 Council for support via grant EP/N017064/1.
 
 
 Contributors
-============
+------------
 - Ed Oughton (GMU & Oxford)
 - Daniel Ralph (Cambridge)
 - Eireann Leverett (Cambridge & Airbus)
