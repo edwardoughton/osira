@@ -58,7 +58,7 @@ def test_cascading_failures():
 
     for i in range(0, 100):
 
-        rand = random.randint(0, 2)
+        rand = random.randint(1, 2)
 
         if rand == 1:
             function = 'Railway Station'
