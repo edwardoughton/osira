@@ -19,12 +19,15 @@ fully-tested, fully-documented codebases available for risk analysts to use. The
 of this repository is to fill this gap.
 
 
-Citation
-========
+Citations
+=========
 
 - Oughton, E. J. et al. (2019) ‘Stochastic Counterfactual Risk Analysis for the Vulnerability
   Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks’,
   Risk Analysis, 39(9), pp. 2012–2031. https://doi.org/10.1111/risa.13291.
+- Cambridge Centre for Risk Studies (2016) Integrated infrastructure: Cyber resiliency in 
+  society, mapping the consequences of an interconnected digital economy. Cambridge: Cambridge 
+  Centre for Risk Studies.
 
 
 Example results
