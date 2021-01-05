@@ -34,13 +34,12 @@ failure, such as from cyber-attacks on electricity assets.
 Citation
 --------
 
-- Oughton, E. J. et al. (2019) ‘Stochastic Counterfactual Risk Analysis for the Vulnerability
-  Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks’,
+- Oughton, E. J. et al. (2019) Stochastic Counterfactual Risk Analysis for the Vulnerability
+  Assessment of Cyber-Physical  Attacks on Electricity Distribution Infrastructure Networks,
   Risk Analysis, 39(9), pp. 2012–2031. https://doi.org/10.1111/risa.13291.
-- Kelly, S. et al. (2016) Integrated infrastructure: Cyber resiliency in society, mapping the
-  consequences of an interconnected digital economy. Cambridge: Cambridge Centre for Risk
+- Kelly, S. et al. (2016) Integrated Infrastructure: Cyber Resiliency in Society, Mapping the
+  Consequences of an Interconnected Digital Economy. Cambridge: Cambridge Centre for Risk
   Studies.
-
 
 Statement of Need
 -----------------
