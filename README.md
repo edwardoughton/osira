@@ -11,7 +11,7 @@ of infrastructure cascading failure. For example, resulting from a cyber-attack.
 The repository name is taken from Wonder Woman where Osira is a fictional Egyptian Goddess
 respected for her advanced understanding of technology.
 
-Advancing our understanding of the groups of technologies known as 'infrastructure systems'
+Improving our understanding of the groups of technologies known as 'infrastructure systems'
 can help us make better decisions, particularly in relation to risk management.
 
 Despite infrastructure being of growing importance, there are surprisingly few open source,
@@ -35,8 +35,8 @@ Example infrastructure inputs
 ![Example](/images/asset_map.png)
 
 
-Using conda
------------
+Installation using conda
+------------------------
 
 The recommended installation method for `osira` is to use conda, which handles packages and
 virtual environments, along with the conda-forge channel which has a host of pre-built
