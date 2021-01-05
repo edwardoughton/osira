@@ -160,20 +160,20 @@ def connect_assets_to_elec_nodes():
         output_edges.append({
             'geometry': geom,
             'properties': {
-                'origin_elec': elec_site['id'][0],
-                'dest_funcionth': site['functionth'],
-                'dest_funcion': site['function'],
-                'dest_distinctiv': site['distinctiv'],
+                'origin_id': elec_site['id'][0],
+                'dest_funth': site['functionth'],
+                'dest_func': site['function'],
+                'dest_dist': site['distinctiv'],
             },
         })
 
         output_nodes.append({
             'geometry': site['geometry'],
             'properties': {
-                'origin_elec': elec_site['id'][0],
-                'dest_funcionth': site['functionth'],
-                'dest_funcion': site['function'],
-                'dest_distinctiv': site['distinctiv'],
+                'origin_id': elec_site['id'][0],
+                'dest_funth': site['functionth'],
+                'dest_func': site['function'],
+                'dest_dist': site['distinctiv'],
             },
         })
 
@@ -184,6 +184,31 @@ def connect_assets_to_elec_nodes():
     output_nodes = gpd.GeoDataFrame.from_features(output_nodes, crs='epsg:27700')
     path = os.path.join(DATA_INTERMEDIATE, 'network_nodes.shp')
     output_nodes.to_file(path, crs='epsg:27700')
+
+
+def estimate_indirect_connections():
+    """
+    This function exports the indirect connections lookup table.
+
+    """
+    path = os.path.join(DATA_INTERMEDIATE, 'network_edges.shp')
+    indirect_lut = gpd.read_file(path)
+
+    output = []
+
+    for idx, item in indirect_lut.iterrows():
+
+        output.append({
+            'origin_id': item['origin_id'],
+            'dest_funth': item['dest_funth'],
+            'dest_func': item['dest_func'],
+            'dest_dist': item['dest_dist'],
+        })
+
+    output = pd.DataFrame(output)
+
+    path = os.path.join(DATA_INTERMEDIATE, 'indirect_lut.csv')
+    output.to_csv(path, index=False)
 
 
 def process_lsoa_boundaries(path):
@@ -341,6 +366,10 @@ if __name__ == '__main__':
 
     print('Connecting assets to electricity nodes')
     connect_assets_to_elec_nodes()
+
+    print('Export indirect connections')
+    path = os.path.join(DATA_INTERMEDIATE, 'assets_by_elec_node.csv')
+    estimate_indirect_connections()
 
     print('Processing LSOA boundaries')
     filename = 'Lower_Layer_Super_Output_Areas__December_2011__Boundaries_EW_BFC.shp'

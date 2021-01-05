@@ -32,9 +32,9 @@ def load_results():
     path = os.path.join(RESULTS, 'all_results.csv')
     all_results = pd.read_csv(path)
 
-    all_results['population_m'] = all_results['population'] / 1e6
+    all_results['population'] = all_results['population'] / 1e6
 
-    all_results = all_results[['nodes', 'population_m', 'cum_probability']]
+    all_results = all_results[['nodes', 'population', 'cum_probability']]
 
     all_results.columns = [
         'Substations',
@@ -59,7 +59,9 @@ def generate_fn_curves(results):
     """
     fig, ax = plt.subplots(figsize=(4, 2.5))
 
-    palette = sns.color_palette("rocket_r", 3)
+    num_colors = results['Substations'].unique()
+
+    palette = sns.color_palette("rocket_r", len(num_colors))
     sns.set_context("paper", font_scale=0.6)
 
     plot = sns.lineplot(
@@ -79,9 +81,9 @@ def generate_fn_curves(results):
     plot.axhline(y=0.01, linewidth=0.2, color='black')
     plot.set_title('Stochastic Counterfactual Risk Analysis of Cyber-Physical Attacks')
 
-    plot.text(0.05, 0.51, '50% CP',rotation=0)
-    plot.text(0.05, 0.11, '10% CP',rotation=0)
-    plot.text(0.05, 0.02, '1% CP',rotation=0)
+    plot.text(0.05, 0.51, '50% CP', rotation=0)
+    plot.text(0.05, 0.11, '10% CP', rotation=0)
+    plot.text(0.05, 0.02, '1% CP', rotation=0)
 
     plt.subplots_adjust(bottom=0.125)
 

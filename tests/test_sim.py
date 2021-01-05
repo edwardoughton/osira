@@ -1,6 +1,6 @@
 import pytest
 import random
-from osira.sim import simulation, allocate_probabilities
+from osira.sim import simulation, allocate_probabilities, cascading_failures
 
 
 def test_simulation():
@@ -37,6 +37,50 @@ def test_simulation():
     unique_nodes = list(set([i['nodes'] for i in all_results]))
 
     assert unique_nodes == num_substations
+
+
+def test_cascading_failures():
+    """
+    Unit test for quantifying cascading failures.
+
+    """
+    random.seed(42)
+
+    data = {}
+
+    for i in range(0, 100):
+        data[i] = {
+            'id': i,
+            'population': random.randint(100, 1000)
+            }
+
+    data_indirect = {}
+
+    for i in range(0, 100):
+
+        rand = random.randint(0, 2)
+
+        if rand == 1:
+            function = 'Railway Station'
+        elif rand == 2:
+            function = 'Gas Distribution or Storage'
+        else:
+            print('Did not recognize selected int')
+
+        data_indirect[i] = {
+            'dest_func': function,
+            }
+
+    num_substations = [4]
+    iterations = 1
+    probabilities = [0.01]
+
+    all_results = simulation(data, num_substations, probabilities, iterations)
+
+    all_results = cascading_failures(all_results, data_indirect)
+
+    assert  all_results[0]['Railway Station'] == 2
+    assert  all_results[0]['Gas Distribution or Storage'] == 2
 
 
 def test_allocate_probabilities():
