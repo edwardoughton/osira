@@ -72,26 +72,32 @@ effects, and estimation of wider macroeconomic impacts for different scenarios.
 The model is spatially-explicit, therefore it expects infrastructure assets to be provided as
 point geometries based on latitude-longitude coordinates. Preferably, population data can also
 be provided at the highest spatial resolution possible. Figure 1 provides an example of asset
-inputs for the South East and East of England.
+inputs for the South East and East of England [@oughton_stochastic_2019].
 
 ![Example of the type of Infrastructure Assets used for Model Inputs](asset_map.png)
 
 # The Osira model
 
-Firstly, the model takes electricity assets and estimates the number of people served by each
-asset. If a substation fails, this allows estimation of the number of directly affected
-households.
+Firstly, the model takes electricity asset locations and estimates the number of people served
+by each node. If a substation fails, this allows estimation of the size of the directly
+affected population.
 
 Secondly, the model takes the number of other infrastructure assets (transport, telecoms,
 water, waste etc.) and estimates which electricity substation they are served by. This enables
 quantification of the number of indirectly affected infrastructure assets if an electricity
-substation fails.
+substation fails. For example, the number of railway stations, airports or gas distribution
+plants which lose power.
 
 For a particular scenario, the modeler must specify how many substations are to be selected.
+In the related paper, 4, 7 and 14 substations are selected as realistic scenarios based on the
+Ukranian cyber-attack of 2015 [@oughton_stochastic_2019].
+
 A Monte Carlo process is then carried out based on the number of stated iterations, which
 randomly selects substations and quantifies the level of disruption. Hence, cumulative
-probabilities can be estimated for different sized events, as per Figure 2 below (see
-[@oughton_stochastic_2019] for more details on the method).
+probabilities can be estimated for different sized scenarios, as per Figure 2 below (see
+[@oughton_stochastic_2019] for more details on the method). This provides two main ways to
+understand potential societal disruption, (i) via different numbers of substations and (ii) via
+different combinations of substations being affected.
 
 ![Example of Direct Population Disruption Results](fn_curve.png)
 
@@ -102,11 +108,12 @@ Understanding interdependent infrastructure systems is essential for resilience 
 can be applied to, particularly given the rise in infrastructure assessment of a single
 sector [@oughton_strategic_2018] or all national sectors [@hall_strategic_2016].
 
-For example, assessing cyber-attack risks for infrastructure systems is an important
-application demonstrated here [@oughton_stochastic_2019]. While this results from
-malicious activity, natural hazards are also important areas of application. Infrastructure
-assessment is used to quantify the impacts of flooding [@pant_critical_2017], earthquakes
-[@zorn_quantifying_2016] and space weather [@oughton_economic_2018].
+Assessing cyber-attack risks for infrastructure systems is an important
+application demonstrated here [@oughton_stochastic_2019]. Whilst cyber-attacks result from
+malicious activity, natural hazards are also important areas of application. For example,
+infrastructure assessment can be used to quantify the impacts of flooding
+[@pant_critical_2017], earthquakes [@zorn_quantifying_2016] and space weather
+[@oughton_economic_2018].
 
 # Acknowledgements
 
