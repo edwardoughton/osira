@@ -45,7 +45,7 @@ impacts in order to protect societ and the economy.
 For example, catastrophic events such as cyber-attacks are both a major risk management issue
 for governments in order to protect lives and livelihoods. However, where there is risk, there
 are also potential business opportunities for the insurance industry, which can also have a
-beneficial societal impact by sharing risk [@Kelly:2016].
+beneficial societal impact by sharing risk [@kelly_integrated_2016].
 
 The literature is full of infrastructure risk papers.
 
@@ -63,9 +63,9 @@ infrastructure cascading failure. A geospatially explicit system-of-systems infr
 model can be defined which reflects dependencies on electricity assets by other transport,
 telecoms, water and waste infrastructure systems
 
-As detailed in [@Oughton:2019], this approach can be integrated into assessments focusing on
-threat identification, threat manifestation, quantification of infrastructure effects, and
-estimation of wider macroeconomic impacts for different scenarios.
+As detailed in [@oughton_stochastic_2019], this approach can be integrated into assessments
+focusing on threat identification, threat manifestation, quantification of infrastructure
+effects, and estimation of wider macroeconomic impacts for different scenarios.
 
 # Spatial units
 
@@ -90,21 +90,22 @@ For a particular scenario, the modeler must specify how many substations are to 
 A Monte Carlo process is then carried out based on the number of stated iterations, which
 randomly selects substations and quantifies the level of disruption. Hence, cumulative
 probabilities can be estimated for different sized events, as per Figure 1 below (see
-[@Oughton:2019] for more details on the method).
+[@oughton_stochastic_2019] for more details on the method).
 
 ![Example of Direct Population Disruption Results](fn_curve.png)
 
 # Applications
 
 Understanding interdependent infrastructure systems is essential for resilience engineering
-[@Hickford:2018]. Thus, there are many applications which the ``osira`` codebase can be
-applied to, particularly given the rise in infrastructure assessment of a single
-sector [@Oughton:2018] or all national sectors[@Hall:2018].
+[@hickford_resilience_2018]. Thus, there are many applications which the ``osira`` codebase
+can be applied to, particularly given the rise in infrastructure assessment of a single
+sector [@oughton_strategic_2018] or all national sectors[@hall_strategic_2016].
 
 For example, assessing cyber-attack risks for infrastructure systems is an important
-application demonstrated here [@Oughton:2019]. While this application results from malicious
-activity, natural hazards equally pose threats. Infrastructure assessment is used to quantify
-the impacts of flooding, earthquakes[@Zorn:2016] and space weather [@Oughton:2018].
+application demonstrated here [@oughton_stochastic_2019]. While this application results from
+malicious activity, natural hazards equally pose threats. Infrastructure assessment is used to
+quantify the impacts of flooding [pant_critical_2017], earthquakes [@zorn_quantifying_2016]
+and space weather [@oughton_economic_2018].
 
 # Acknowledgements
 
