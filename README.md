@@ -33,7 +33,7 @@ Citations
 Example infrastructure inputs
 -----------------------------
 <p align="center">
-  <img src="/images/asset_map.png" />
+  <img src="/paper/asset_map.png" />
 </p>
 
 
@@ -83,7 +83,7 @@ Followed by using the `vis.py` script to visualize the results:
 
 Example results
 ---------------
-![Example](/images/fn_curve.png)
+![Example](/paper/fn_curve.png)
 
 
 Background and funding
